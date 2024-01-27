@@ -23,11 +23,13 @@
 
 <body>
     {% include 'includes/header.html' %}
-    {% block content %}
-    <!-- Content Goes here -->
-    <h1>Hello, World!!!</h1>
-    {% endblock content %}
+    <main>
+        {% block content %}
+        <h1>Hello, World!!!</h1>
+        {% endblock content %}
+    </main>
 
+    {% include 'includes/footer.html' %}
 </body>
 
 </html>
