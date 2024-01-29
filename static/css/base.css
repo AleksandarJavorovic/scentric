@@ -23,3 +23,8 @@ footer {
     height: 2rem;
     margin: 1rem;
 }
+
+.active {
+    border-bottom: 2px solid #adb5bd;
+    font-weight: 500;
+}

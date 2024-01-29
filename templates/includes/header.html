@@ -1,6 +1,7 @@
 {% load static %}
 
 <header>
+  {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="{% static 'images/scentric-logo.png' %}" alt="scentric logo"></a>
@@ -10,7 +11,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link {% if url_name == 'home' %} active {% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Perfume Reviews</a>
@@ -18,12 +19,18 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Add Review</a>
               </li>
+              {% if request.user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link {% if url_name == 'accounts/logout' %} active {% endif %}" href="/accounts/logout/">Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link {% if url_name == 'accounts/signup' %} active {% endif %}" href="/accounts/signup/">Register</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link {% if url_name == 'accounts/login' %} active {% endif %}" href="/accounts/login/">Login</a>
               </li>
+              {% endif %}
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -32,4 +39,5 @@
           </div>
         </div>
       </nav>
+  {% endwith %}
 </header>
