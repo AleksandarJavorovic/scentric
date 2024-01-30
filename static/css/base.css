@@ -28,3 +28,9 @@ footer {
     border-bottom: 2px solid #adb5bd;
     font-weight: 500;
 }
+.form {
+    width: 100%;
+    margin: 2% auto;
+    box-shadow: 1px -1px 7px 0 #00000061;
+    border-radius: 5px;
+}
