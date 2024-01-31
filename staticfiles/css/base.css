@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    height: 2rem;
+    margin: 1rem;
+}
+
+.active {
+    border-bottom: 2px solid #adb5bd;
+    font-weight: 500;
+}
+.form {
+    width: 100%;
+    margin: 2% auto;
+    box-shadow: 1px -1px 7px 0 #00000061;
+    border-radius: 5px;
+}
