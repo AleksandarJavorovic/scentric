@@ -16,6 +16,15 @@ PERFUME_GROUPS = (
     ("woody", "Woody"),
 )
 
+CONCENTRATIONS = (
+    ("eau_fraiche", "Eau Fraiche"),
+    ("eau_de_cologne", "Eau de Cologne"),
+    ("eau_de_toilette", "Eau de Toilette"),
+    ("eau_de_parfum", "Eau de Parfum"),
+    ("parfum", "Parfum"),
+    ("extrait_de_parfum", "Extrait de Parfum"),
+)
+
 
 # Create your models here.
 
@@ -28,6 +37,7 @@ class Perfume(models.Model):
     )
     slug = models.SlugField(max_length=200, unique=True)
     perfume_brand = models.CharField(max_length=100, null=False, blank=False)
+    concentration = models.CharField(max_length=50, choices=CONCENTRATIONS, default="eau_de_toilette")
     perfume_name = models.CharField(max_length=100, null=False, blank=False, unique=True)
     perfume_group = models.CharField(max_length=30, choices=PERFUME_GROUPS, default="woody")
     top_notes = models.CharField(max_length=200, null=False, blank=False)
@@ -50,4 +60,4 @@ class Perfume(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"{self.perfume_name} | written by {self.user}"
+        return f"{self.perfume_brand} - {self.perfume_name} | written by {self.user}"

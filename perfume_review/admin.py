@@ -13,6 +13,5 @@ class PerfumeAdmin(admin.ModelAdmin):
         "base_notes",
         "image",
         "description",
-        "base_notes",
     )
     list_filter = ("perfume_group",)
