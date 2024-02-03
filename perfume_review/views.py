@@ -8,7 +8,7 @@ class AddReview(CreateView):
     '''
     template_name = 'add_review.html'
     model = Perfume
-    succes_url = '/'
+    success_url = '/'
     form_class = PerfumeForm
 
     def form_valid(self, form):

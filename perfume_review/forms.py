@@ -20,6 +20,7 @@ class PerfumeForm(forms.ModelForm):
             "base_notes",
             "image",
             "description",
+            "rating",
         ]
 
         description = forms.CharField(widget=RichTextWidget())
@@ -35,4 +36,5 @@ class PerfumeForm(forms.ModelForm):
             "base_notes":"Base Notes",
             "image": "Perfume Image",
             "description": "Perfume Description",
+            "rating": "Rating",
         }
