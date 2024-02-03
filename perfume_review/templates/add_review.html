@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Add Review{% endblock %} 
+
+{% block content %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data" class="p-3 form">
+        <h1 class="text-center">Introduce us to your favourite perfume!</h1>
+        {% csrf_token %}
+        {{ form.media }} 
+        {{ form|crispy }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-dark mt-2">Create Review</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

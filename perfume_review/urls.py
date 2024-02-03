@@ -3,5 +3,5 @@ from .views import AddReview
 
 
 urlpatterns = [
-    path("", AddReview.as_view(), name="add_review"),
+    path("add_review/", AddReview.as_view(), name="add_review"),
 ]
