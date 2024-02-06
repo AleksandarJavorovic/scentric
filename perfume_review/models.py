@@ -35,7 +35,7 @@ class Perfume(models.Model):
     user = models.ForeignKey(
         User, related_name="perfume_reviewer", on_delete=models.CASCADE
     )
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, default="", null=False)
     perfume_brand = models.CharField(max_length=100, null=False, blank=False)
     concentration = models.CharField(max_length=50, choices=CONCENTRATIONS, default="eau_de_toilette")
     perfume_name = models.CharField(max_length=100, null=False, blank=False, unique=True)
@@ -52,7 +52,6 @@ class Perfume(models.Model):
         null=False,
     )
     description = RichTextField(max_length=1000, null=False, blank=False)
-    rating = models.IntegerField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     
