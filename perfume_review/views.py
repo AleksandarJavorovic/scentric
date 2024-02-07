@@ -1,12 +1,22 @@
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 from .models import Perfume
 from .forms import PerfumeForm
+
+
+class Perfumes(ListView):
+    '''
+    View for all of the perfume reviews
+    '''
+    template_name = "perfume_review/perfumes.html"
+    model = Perfume
+    context_object_name = "perfumes"
+
 
 class AddReview(CreateView):
     '''
     Add perfume review
     '''
-    template_name = 'add_review.html'
+    template_name = 'perfume_review/add_review.html'
     model = Perfume
     success_url = '/'
     form_class = PerfumeForm
