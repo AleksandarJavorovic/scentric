@@ -1,6 +1,15 @@
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from .models import Perfume
 from .forms import PerfumeForm
+
+
+class PerfumeDetail(DetailView):
+    '''
+    View one of the perfume reviews
+    '''
+    template_name = "perfume_review/perfume_detail.html"
+    model = Perfume
+    context_object_name = "perfume"
 
 
 class Perfumes(ListView):
