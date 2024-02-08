@@ -34,3 +34,14 @@ footer {
     box-shadow: 1px -1px 7px 0 #00000061;
     border-radius: 5px;
 }
+
+/* Perfumes */
+
+.card {
+    height: 90%;
+    margin-top: 1rem;
+}
+
+.perfumes:hover {
+    cursor: pointer;
+}

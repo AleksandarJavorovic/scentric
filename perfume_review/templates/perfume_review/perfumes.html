@@ -3,22 +3,24 @@
 {% block title %}Perfumes{% endblock %}
 
 {% block content %} 
-<h1 class="text-center p-2 d-block">
+<h1 class="text-center p-3 d-block">
     Our Lovely Perfumes
 </h1>
-<div class="container d-flex flex-row flex-wrap justify-content-center">
-    {% for recipe in recipes %} 
-    <a href="" class="perfumes" aria-label="Click to view {{perfume.title}}">
-        <div class="card mb-3" style="max-width: 540px;">
+<div class="container d-flex flex-column justify-content-center">
+    {% for perfume in perfumes %} 
+    <a href="" class="text-decoration-none text-dark" aria-label="Click to view {{perfume.perfume_name}}">
+        <div class="card mb-3 shadow">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="{{perfume.image.url}}" class="img-fluid rounded-start" alt="{{perfume.image_alt}}">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h2 class="card-title">{{perfume.title}}</h2>
-                  <p class="card-text">{{perfume.description}}</p>
-                  <p class="card-text"><small class="text-muted">{{perfume.updated_on}}</small></p>
+                  <h2 class="card-title">{{perfume.perfume_brand}}</h2>
+                  <h2 class="card-title">{{perfume.perfume_name}}</h2>
+                  <p class="card-text"><small>Top Notes: {{perfume.top_notes|truncatechars:50}}</small></p>
+                  <p class="card-text"><small>Middle Notes: {{perfume.middle_notes|truncatechars:50}}</small></p>
+                  <p class="card-text"><small>Base Notes: {{perfume.base_notes|truncatechars:50}}</small></p>
                 </div>
               </div>
             </div>
