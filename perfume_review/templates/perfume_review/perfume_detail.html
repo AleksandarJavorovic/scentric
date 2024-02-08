@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Perfume Detail - {{perfume.perfume_name}}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="recipe-info mt-3 p-1">
+            <div class="recipe-img">
+                <img src="{{ perfume.image.url }}" alt="{{ perfume.image_alt }}" class="perfume-picture">
+            </div>
+            <div class="perfume-detail">
+                <h1 class="text-center">{{ perfume.perfume_name }}</h1>
+                <p class="text-center">Reviewed by {{perfume.user}} on {{perfume.created_on}}</p>
+                <hr>
+
+                {% if request.user == recipe.user %} 
+                    <div class="text-center">
+                        <a href="" class="btn btn-dark w-25">Edit</a>
+                        <a href="" class="btn btn-dark w-25">Delete</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
