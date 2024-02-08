@@ -4,9 +4,9 @@
 
 {% block content %}
     <div class="container">
-        <div class="recipe-info mt-3 p-1">
-            <div class="recipe-img">
-                <img src="{{ perfume.image.url }}" alt="{{ perfume.image_alt }}" class="perfume-picture">
+        <div class="perfume-info mt-3 p-1">
+            <div class="perfume-img">
+                <img src="{{ perfume.image.url }}" alt="{{ perfume.image_alt }}" class="img-fluid">
             </div>
             <div class="perfume-detail">
                 <h1 class="text-center">{{ perfume.perfume_brand }}</h1>
@@ -16,17 +16,20 @@
                 <p class="p-1"><strong>Top Notes: </strong> {{ perfume.top_notes|title }}</p>
                 <p class="p-1"><strong>Middle Notes: </strong> {{ perfume.middle_notes|title }}</p>
                 <p class="p-1"><strong>Base Notes: </strong> {{ perfume.base_notes|title }}</p>
-                <hr>
-                <p class="text-center">Created by {{perfume.user}} on {{perfume.created_on}}</p>
                 
 
-                {% if request.user == recipe.user %} 
+                {% if request.user == perfume.user %} 
                     <div class="text-center">
                         <a href="" class="btn btn-dark w-25">Edit</a>
                         <a href="" class="btn btn-dark w-25">Delete</a>
                     </div>
                 {% endif %}
             </div>
+        </div>
+        <hr>
+        <div>
+            <p class="text-center">{{ perfume.description|safe }}</p>
+            <p class="text-center">Created by <strong>{{perfume.user}}</strong> on {{perfume.created_on}}</p>
         </div>
     </div>
 {% endblock %}

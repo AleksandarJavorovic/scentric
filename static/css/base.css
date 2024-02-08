@@ -45,3 +45,36 @@ footer {
 .perfumes:hover {
     cursor: pointer;
 }
+
+.perfume-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.perfume-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfume-picture {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 62.5em) {
+    .perfume-info {
+        flex-direction: row;
+    }
+
+    .perfume-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .perfume-detail {
+        width: 60%;
+        padding: 2rem;
+    }
+}
