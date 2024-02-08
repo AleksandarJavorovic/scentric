@@ -9,9 +9,16 @@
                 <img src="{{ perfume.image.url }}" alt="{{ perfume.image_alt }}" class="perfume-picture">
             </div>
             <div class="perfume-detail">
+                <h1 class="text-center">{{ perfume.perfume_brand }}</h1>
                 <h1 class="text-center">{{ perfume.perfume_name }}</h1>
-                <p class="text-center">Reviewed by {{perfume.user}} on {{perfume.created_on}}</p>
+                <h1 class="text-center">{{ perfume.concentration }}</h1>
+                <p class="p-1"><strong>Perfume Group: </strong> {{ perfume.perfume_group|title }}</p>
+                <p class="p-1"><strong>Top Notes: </strong> {{ perfume.top_notes|title }}</p>
+                <p class="p-1"><strong>Middle Notes: </strong> {{ perfume.middle_notes|title }}</p>
+                <p class="p-1"><strong>Base Notes: </strong> {{ perfume.base_notes|title }}</p>
                 <hr>
+                <p class="text-center">Created by {{perfume.user}} on {{perfume.created_on}}</p>
+                
 
                 {% if request.user == recipe.user %} 
                     <div class="text-center">
