@@ -53,3 +53,16 @@ class DeletePerfume(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
+
+
+class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    '''
+    View to edit a perfume review
+    '''
+    template_name = 'perfume_review/edit_perfume.html'
+    model = Perfume
+    form_class = PerfumeFormForm
+    success_url = '/perfumes/'
+    
+    def test_func(self):
+        return self.request.user == self.get_object().user
