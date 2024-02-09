@@ -1,6 +1,7 @@
 from django.views.generic import (
     CreateView, ListView,
-    DetailView, DeleteView
+    DetailView, DeleteView,
+    UpdateView
 )
 
 from .models import Perfume
