@@ -36,7 +36,7 @@ class AddReview(CreateView):
     '''
     template_name = 'perfume_review/add_review.html'
     model = Perfume
-    success_url = '/'
+    success_url = '/perfumes/'
     form_class = PerfumeForm
 
     def form_valid(self, form):
@@ -61,7 +61,7 @@ class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     '''
     template_name = 'perfume_review/edit_perfume.html'
     model = Perfume
-    form_class = PerfumeFormForm
+    form_class = PerfumeForm
     success_url = '/perfumes/'
     
     def test_func(self):
