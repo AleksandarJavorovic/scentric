@@ -11,6 +11,8 @@ from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
 )
 
+from django.db.models import Q
+
 
 class PerfumeDetail(DetailView):
     '''
@@ -28,6 +30,22 @@ class Perfumes(ListView):
     template_name = "perfume_review/perfumes.html"
     model = Perfume
     context_object_name = "perfumes"
+
+    def get_queryset(self, **kwargs):
+        query = self.request.GET.get('q')
+        if query:
+            perfumes = self.model.objects.filter(
+                Q(perfume_brand__icontains=query) |
+                Q(perfume_name__icontains=query) |
+                Q(perfume_group__icontains=query) |
+                Q(concentration__icontains=query) |
+                Q(top_notes__icontains=query) |
+                Q(middle_notes__icontains=query) |
+                Q(base_notes__icontains=query)
+            )
+        else:
+            perfumes = self.model.objects.all()
+        return perfumes
 
 
 class AddReview(CreateView):
