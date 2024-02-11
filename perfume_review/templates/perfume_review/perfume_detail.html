@@ -11,7 +11,7 @@
             <div class="perfume-detail">
                 <h1 class="text-center">{{ perfume.perfume_brand }}</h1>
                 <h1 class="text-center">{{ perfume.perfume_name }}</h1>
-                <h1 class="text-center">{{ perfume.concentration }}</h1>
+                <h1 class="text-center">{{ perfume.concentration|title }}</h1>
                 <p class="p-1"><strong>Perfume Group: </strong> {{ perfume.perfume_group|title }}</p>
                 <p class="p-1"><strong>Top Notes: </strong> {{ perfume.top_notes|title }}</p>
                 <p class="p-1"><strong>Middle Notes: </strong> {{ perfume.middle_notes|title }}</p>

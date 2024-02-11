@@ -9,7 +9,7 @@
   <h1>{% trans "Sign In" %}</h1>
 
   <p>{% blocktrans %}If you have not created an account yet, then please
-  <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+  <a href="{{ signup_url }}" class="text-decoration-none">sign up</a> first.{% endblocktrans %}</p>
 
   <form class="form p-2" method="POST" action="{% url 'account_login' %}">
     {% csrf_token %}
@@ -18,7 +18,7 @@
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
     <button class="btn btn-dark w-50 mb-2" type="submit">{% trans "Sign In" %}</button>
-    <a class="button secondaryAction d-block" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    <a class="button secondaryAction d-block text-decoration-none" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
   </form>
 </div>
 
