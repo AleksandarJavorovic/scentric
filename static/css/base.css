@@ -14,15 +14,16 @@ main {
 footer {
     flex-shrink: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .social-icon {
     height: 2rem;
-    margin: 1rem;
+    margin: 0.5rem;
 }
+
 
 .active {
     border-bottom: 2px solid #adb5bd;
