@@ -17,12 +17,12 @@ PERFUME_GROUPS = (
 )
 
 CONCENTRATIONS = (
-    ("eau_fraiche", "Eau Fraiche"),
-    ("eau_de_cologne", "Eau de Cologne"),
-    ("eau_de_toilette", "Eau de Toilette"),
-    ("eau_de_parfum", "Eau de Parfum"),
+    ("eau fraiche", "Eau Fraiche"),
+    ("eau de cologne", "Eau de Cologne"),
+    ("eau de toilette", "Eau de Toilette"),
+    ("eau de parfum", "Eau de Parfum"),
     ("parfum", "Parfum"),
-    ("extrait_de_parfum", "Extrait de Parfum"),
+    ("extrait de parfum", "Extrait de Parfum"),
 )
 
 
@@ -37,14 +37,14 @@ class Perfume(models.Model):
     )
     slug = models.SlugField(max_length=200, default="", null=False)
     perfume_brand = models.CharField(max_length=100, null=False, blank=False)
-    concentration = models.CharField(max_length=50, choices=CONCENTRATIONS, default="eau_de_toilette")
+    concentration = models.CharField(max_length=50, choices=CONCENTRATIONS, default="eau de parfum")
     perfume_name = models.CharField(max_length=100, null=False, blank=False, unique=True)
     perfume_group = models.CharField(max_length=30, choices=PERFUME_GROUPS, default="woody")
     top_notes = models.CharField(max_length=200, null=False, blank=False)
     middle_notes = models.CharField(max_length=200, null=False, blank=False)
     base_notes = models.CharField(max_length=200, null=False, blank=False)
     image = ResizedImageField(
-        size=[400, None],
+        size=[300, 320],
         quality=75,
         upload_to="perfume_reviwes/",
         force_format="WEBP",
