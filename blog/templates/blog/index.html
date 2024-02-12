@@ -17,12 +17,16 @@
             and elevate your grooming routine with Scentric.
         </p>
     </section>
-    <section>
-        <div>
+    <hr>
+    <h1 class="text-center mb-3 mt-5">The Newest Perfumes!</h1>
+    <section class="p-1">
+        <div class="perfume-cont">
             {% for perfume in perfumes %}
-                <a href="{% url 'perfume_detail' perfume.id %}">
-                    <img src="{{perfume.image.url}}" alt="{{perfume.image_alt}}">
-                    <div class="centered"><h2>{{perfume.perfume_name}}</h2></div>
+                <a href="{% url 'perfume_detail' perfume.id %}" class="image-container">
+                    <img src="{{perfume.image.url}}" alt="{{perfume.image_alt}}" class="img-fluid">
+                    <div class="centered">
+                        <h3>{{perfume.perfume_name}}</h3>
+                    </div>
                 </a>
             {% endfor %}
         </div>

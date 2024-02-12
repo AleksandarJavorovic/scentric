@@ -9,4 +9,4 @@ class Index(ListView):
     context_object_name = 'perfumes'
 
     def get_queryset(self):
-        return self.model.objects.all()[:1]
+        return self.model.objects.all()[:3]
