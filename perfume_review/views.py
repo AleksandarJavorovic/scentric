@@ -60,22 +60,27 @@ class AddReview(SuccessMessageMixin, CreateView):
     model = Perfume
     success_url = '/perfumes/'
     form_class = PerfumeForm
-    success_message = 'Perfume Review successfully created!'
+    success_message = 'Perfume Review has been successfully created!'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddReview, self).form_valid(form)
 
 
-class DeletePerfume(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+class DeletePerfume(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, DeleteView):
     '''
     View to delete a perfume review
     '''
     model = Perfume
     success_url = '/perfumes/'
+    success_message = "The Perfume Review has been deleted!"
 
     def test_func(self):
         return self.request.user == self.get_object().user
+
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(PostDelete, self).delete(request, *args, **kwargs)
 
 
 class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView):
@@ -86,7 +91,7 @@ class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, 
     model = Perfume
     form_class = PerfumeForm
     success_url = '/perfumes/'
-    success_message = "Your Review has been updated successfully!"
+    success_message = 'Perfume Review has been successfully edited!'
     
     def test_func(self):
         return self.request.user == self.get_object().user
