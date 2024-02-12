@@ -1,1 +1,31 @@
 {% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<div class="container flex-column pt-3">
+    <section class="text-center">
+        <h1 class="mx-auto">Scentric - Place for those who want to smell attractive!</h1>
+
+        <p class="pt-3">
+            Welcome to Scentric, your go-to destination for discovering alluring new fragrances tailored specifically
+            for gentlemen. Dive into a curated selection of captivating scents from renowned brands and emerging
+            perfumers alike. Whether you're seeking a signature scent for everyday wear or a special occasion, Scentric
+            offers a wealth of resources to guide you through your olfactory journey. Explore our collection, read
+            expert reviews, and stay updated on the latest trends in the world of men's fragrances. Unleash your senses
+            and elevate your grooming routine with Scentric.
+        </p>
+    </section>
+    <section>
+        <div>
+            {% for perfume in perfumes %}
+                <a href="{% url 'perfume_detail' perfume.id %}">
+                    <img src="{{perfume.image.url}}" alt="{{perfume.image_alt}}">
+                    <div class="centered"><h2>{{perfume.perfume_name}}</h2></div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

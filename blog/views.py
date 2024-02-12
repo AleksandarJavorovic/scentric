@@ -6,7 +6,7 @@ from perfume_review.models import Perfume
 class Index(ListView):
     template_name = 'blog/index.html'
     model = Perfume
-    context_object_ name = 'perfumes'
+    context_object_name = 'perfumes'
 
     def get_queryset(self):
         return self.model.objects.all()[:1]
