@@ -23,6 +23,12 @@
 
 <body>
     {% include 'includes/header.html' %}
+    {% for message in messages %}
+        <div class="alert alert-dismissible {{ message.tags }}" role="alert">
+            <div>{{ message | safe }}</div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
     <main>
         {% block content %}
         

@@ -4,12 +4,16 @@ from django.views.generic import (
     UpdateView
 )
 
+from django.contrib import messages
+
 from .models import Perfume
 from .forms import PerfumeForm
 
 from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
 )
+
+from django.contrib.messages.views import SuccessMessageMixin
 
 from django.db.models import Q
 
@@ -48,7 +52,7 @@ class Perfumes(ListView):
         return perfumes
 
 
-class AddReview(CreateView):
+class AddReview(SuccessMessageMixin, CreateView):
     '''
     Add perfume review
     '''
@@ -56,6 +60,7 @@ class AddReview(CreateView):
     model = Perfume
     success_url = '/perfumes/'
     form_class = PerfumeForm
+    success_message = 'Perfume Review successfully created!'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -73,7 +78,7 @@ class DeletePerfume(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == self.get_object().user
 
 
-class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixin, UpdateView):
     '''
     View to edit a perfume review
     '''
@@ -81,6 +86,7 @@ class EditPerfume(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Perfume
     form_class = PerfumeForm
     success_url = '/perfumes/'
+    success_message = "Your Review has been updated successfully!"
     
     def test_func(self):
         return self.request.user == self.get_object().user
