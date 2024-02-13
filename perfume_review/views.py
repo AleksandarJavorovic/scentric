@@ -52,7 +52,7 @@ class Perfumes(ListView):
         return perfumes
 
 
-class AddReview(SuccessMessageMixin, CreateView):
+class AddReview(SuccessMessageMixin, LoginRequiredMixin, CreateView):
     '''
     Add perfume review
     '''
