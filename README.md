@@ -19,8 +19,8 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [Perfumes List](#perfumes-list)
   * [Detailed Perfume View](#detailed-perfume-view)
   * [Add Perfume](#add-perfume)
-  * [Register](#register)
-    * [Validation](#validation)
+  * [Registration](#registration)
+  * [Validation](#validation)
   * [Login](#login)
   * [Footer](#footer)
 * [Testing](#testing)
@@ -179,3 +179,12 @@ When I set my mind to make blog-like site about perfumes:
   - Description
 
 - All of the fields are obligatory to be filled in.
+
+## Registration
+![Registration](static/images/features/signup.png)
+
+- Registration/Signup page are pretty simple and easy to understand.
+
+## Validation
+![Validation](static/images/features/validation.png)
+- All fields have to be filled in and in case the username is taken, or password is too common feedback mechanism will inform the user about it.
