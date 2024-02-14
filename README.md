@@ -23,6 +23,7 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [Validation](#validation)
   * [Login](#login)
   * [Footer](#footer)
+  * [403 and 404 Page](#403-404-page)
 * [Testing](#testing)
   * [Manual Testing](#manual-testing)
   * [Validation](#validation)
@@ -200,3 +201,15 @@ When I set my mind to make blog-like site about perfumes:
 ![Logout](static/images/features/log-out.png)
 
 - Logout/Sign out page is very simple, user needs to click the "Sign Out" button, after that he will be logged out and sent to the home page.
+
+## Footer
+![Footer](static/images/features/footer.png)
+- Footer is also pretty minimalistic, having icons, presenting social networks links and name of the site, as well as trademark symbol.
+- Links to the Social Networks are opened in the new tab, according to the UI/UX design.
+
+## 403 and 404 Pages
+![Footer](static/images/features/403-page.png)
+- Custom 403 Page is also there in case someone tries to delete something which does not belong to him.
+
+![Footer](static/images/features/404error.png)
+- Custom 404 Page is also present in case someone tries to open non-existing page.
