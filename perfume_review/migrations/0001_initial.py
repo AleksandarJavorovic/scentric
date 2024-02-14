@@ -17,25 +17,66 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Perfume',
+            name="Perfume",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('slug', models.SlugField(max_length=200, unique=True)),
-                ('perfume_brand', models.CharField(max_length=100)),
-                ('perfume_name', models.CharField(max_length=100, unique=True)),
-                ('perfume_group', models.CharField(choices=[('amber', 'Amber'), ('aromatic', 'Aromatic'), ('chypre', 'Chypre'), ('citrus', 'Citrus'), ('floral', 'Floral'), ('leather', 'Leather'), ('woody', 'Woody')], default='woody', max_length=30)),
-                ('top_notes', models.CharField(max_length=200)),
-                ('middle_notes', models.CharField(max_length=200)),
-                ('base_notes', models.CharField(max_length=200)),
-                ('image', django_resized.forms.ResizedImageField(crop=None, force_format='WEBP', keep_meta=True, quality=75, scale=None, size=[400, None], upload_to='perfume_reviwes/')),
-                ('description', djrichtextfield.models.RichTextField(max_length=1000)),
-                ('rating', models.IntegerField()),
-                ('created_on', models.DateTimeField(auto_now_add=True)),
-                ('updated_on', models.DateTimeField(auto_now=True)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='perfume_reviewer', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("slug", models.SlugField(max_length=200, unique=True)),
+                ("perfume_brand", models.CharField(max_length=100)),
+                ("perfume_name", models.CharField(max_length=100, unique=True)),
+                (
+                    "perfume_group",
+                    models.CharField(
+                        choices=[
+                            ("amber", "Amber"),
+                            ("aromatic", "Aromatic"),
+                            ("chypre", "Chypre"),
+                            ("citrus", "Citrus"),
+                            ("floral", "Floral"),
+                            ("leather", "Leather"),
+                            ("woody", "Woody"),
+                        ],
+                        default="woody",
+                        max_length=30,
+                    ),
+                ),
+                ("top_notes", models.CharField(max_length=200)),
+                ("middle_notes", models.CharField(max_length=200)),
+                ("base_notes", models.CharField(max_length=200)),
+                (
+                    "image",
+                    django_resized.forms.ResizedImageField(
+                        crop=None,
+                        force_format="WEBP",
+                        keep_meta=True,
+                        quality=75,
+                        scale=None,
+                        size=[400, None],
+                        upload_to="perfume_reviwes/",
+                    ),
+                ),
+                ("description", djrichtextfield.models.RichTextField(max_length=1000)),
+                ("rating", models.IntegerField()),
+                ("created_on", models.DateTimeField(auto_now_add=True)),
+                ("updated_on", models.DateTimeField(auto_now=True)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="perfume_reviewer",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-created_on'],
+                "ordering": ["-created_on"],
             },
         ),
     ]

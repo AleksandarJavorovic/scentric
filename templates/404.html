@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}404 Handler{% endblock %} 
+{% block title %}404 Handler{% endblock %}
 
-{% block content %} 
-    <div class="container text-center pt-5">
-        <h1>404 Error - Looks like that page doesn't exist!</h1>
-        <p>Return to our site and check some attractive perfume! :)</p>
-        <a href="{% url 'home' %}" class="btn btn-dark w-25">Home</a>
-    </div>
+{% block content %}
+<div class="container text-center pt-5">
+    <h1>404 Error - Looks like that page doesn't exist!</h1>
+    <p>Return to our site and check some attractive perfume! :)</p>
+    <a href="{% url 'home' %}" class="btn btn-dark w-25">Home</a>
+</div>
 {% endblock %}

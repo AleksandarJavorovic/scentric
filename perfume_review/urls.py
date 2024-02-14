@@ -1,8 +1,7 @@
 from django.urls import path
 from .views import (
-    AddReview, Perfumes,
-    PerfumeDetail, DeletePerfume,
-    EditPerfume
+    AddReview, Perfumes, PerfumeDetail,
+    DeletePerfume, EditPerfume
 )
 
 

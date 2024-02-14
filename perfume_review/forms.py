@@ -25,7 +25,6 @@ class PerfumeForm(forms.ModelForm):
 
         description = forms.CharField(widget=RichTextWidget())
 
-
         labels = {
             "perfume_brand": "Perfume Brand",
             "concentration": "Concentration",
@@ -33,7 +32,7 @@ class PerfumeForm(forms.ModelForm):
             "perfume_group": "Perfume Group",
             "top_notes": "Top Notes",
             "middle_notes": "Middle Notes",
-            "base_notes":"Base Notes",
+            "base_notes": "Base Notes",
             "image": "Perfume Image",
             "description": "Perfume Description",
             "image_alt": "Image Description",

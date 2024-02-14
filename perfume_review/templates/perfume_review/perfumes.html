@@ -1,29 +1,30 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block title %}Perfumes{% endblock %}
 
-{% block content %} 
+{% block content %}
 <h1 class="text-center p-3 d-block">
-    Our Lovely Perfumes
+  Our Lovely Perfumes
 </h1>
 <div class="container d-flex flex-column justify-content-center">
-    {% for perfume in perfumes %} 
-    <a href="{% url 'perfume_detail' perfume.id %}" class="text-decoration-none text-dark" aria-label="Click to view {{perfume.perfume_name}}">
-        <div class="card mb-3 shadow">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img src="{{perfume.image.url}}" class="img-fluid rounded-start p-2" alt="{{perfume.image_alt}}">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h2 class="card-title text-center">{{perfume.perfume_brand}}</h2>
-                  <h2 class="card-title text-center">{{perfume.perfume_name}}</h2>
-                  <p class="card-text"><small>{{perfume.description|safe|truncatechars:200}}</small></p>
-                </div>
-              </div>
-            </div>
+  {% for perfume in perfumes %}
+  <a href="{% url 'perfume_detail' perfume.id %}" class="text-decoration-none text-dark"
+    aria-label="Click to view {{perfume.perfume_name}}">
+    <div class="card mb-3 shadow">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{perfume.image.url}}" class="img-fluid rounded-start p-2" alt="{{perfume.image_alt}}">
         </div>
-    </a>
-    {% endfor %}
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title text-center">{{perfume.perfume_brand}}</h2>
+            <h2 class="card-title text-center">{{perfume.perfume_name}}</h2>
+            <p class="card-text">{{perfume.description|safe|truncatechars:200}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
 </div>
 {% endblock %}

@@ -3,33 +3,33 @@
 {% block title %}Perfume Detail - {{perfume.perfume_name}}{% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="perfume-info mt-3 p-1">
-            <div class="perfume-img">
-                <img src="{{ perfume.image.url }}" alt="{{ perfume.image_alt }}" class="img-fluid">
-            </div>
-            <div class="perfume-detail">
-                <h1 class="text-center">{{ perfume.perfume_brand }}</h1>
-                <h1 class="text-center">{{ perfume.perfume_name }}</h1>
-                <h1 class="text-center">{{ perfume.concentration|title }}</h1>
-                <p class="p-1"><strong>Perfume Group: </strong> {{ perfume.perfume_group|title }}</p>
-                <p class="p-1"><strong>Top Notes: </strong> {{ perfume.top_notes|title }}</p>
-                <p class="p-1"><strong>Middle Notes: </strong> {{ perfume.middle_notes|title }}</p>
-                <p class="p-1"><strong>Base Notes: </strong> {{ perfume.base_notes|title }}</p>
-                
-
-                {% if request.user == perfume.user %} 
-                    <div class="text-center">
-                        <a href="{% url 'edit_perfume' perfume.id %}" class="btn btn-dark w-25">Edit</a>
-                        <a href="{% url 'delete_perfume' perfume.id %}" class="btn btn-dark w-25">Delete</a>
-                    </div>
-                {% endif %}
-            </div>
+<div class="container">
+    <div class="perfume-info mt-3 p-1">
+        <div class="perfume-img">
+            <img src="{{ perfume.image.url }}" alt="{{ perfume.image_alt }}" class="img-fluid">
         </div>
-        <hr>
-        <div>
-            <p class="text-center">{{ perfume.description|safe }}</p>
-            <p class="text-center">Created by <strong>{{perfume.user}}</strong> on {{perfume.created_on}}</p>
+        <div class="perfume-detail">
+            <h1 class="text-center">{{ perfume.perfume_brand }}</h1>
+            <h1 class="text-center">{{ perfume.perfume_name }}</h1>
+            <h1 class="text-center">{{ perfume.concentration|title }}</h1>
+            <p class="p-1"><strong>Perfume Group: </strong> {{ perfume.perfume_group|title }}</p>
+            <p class="p-1"><strong>Top Notes: </strong> {{ perfume.top_notes|title }}</p>
+            <p class="p-1"><strong>Middle Notes: </strong> {{ perfume.middle_notes|title }}</p>
+            <p class="p-1"><strong>Base Notes: </strong> {{ perfume.base_notes|title }}</p>
+
+
+            {% if request.user == perfume.user %}
+            <div class="text-center">
+                <a href="{% url 'edit_perfume' perfume.id %}" class="btn btn-dark w-25">Edit</a>
+                <a href="{% url 'delete_perfume' perfume.id %}" class="btn btn-dark w-25">Delete</a>
+            </div>
+            {% endif %}
         </div>
     </div>
+    <hr>
+    <div>
+        <p class="text-center">{{ perfume.description|safe }}
+            <p class="text-center">Created by <strong>{{perfume.user}}</strong> on {{perfume.created_on}}</p>
+    </div>
+</div>
 {% endblock %}
