@@ -139,3 +139,9 @@ When I set my mind to make blog-like site about perfumes:
 - This feature is present at the home page, it presents three last perfumes being added to the site.
 - Each one is presented with the image and name of the perfume.
 - Perfume Images/Names are clickable and they are redirecting user to the detailed view of the given perfume.
+
+## Perfumes List
+![The Newest Perfumes](static/images/features/perfumes-list.png)
+
+- Perfumes page is sort of a list of perfumes, present at the moment, with the last added perfume being at the top of the list.
+- Each perfume on the list, is presented as a card containing:image, perfume brand, perfume name and beginning of the perfume description just to attract user to enter and find out more about the specific perfume.
