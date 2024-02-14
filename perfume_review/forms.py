@@ -19,6 +19,7 @@ class PerfumeForm(forms.ModelForm):
             "middle_notes",
             "base_notes",
             "image",
+            "image_alt",
             "description",
         ]
 
@@ -35,4 +36,5 @@ class PerfumeForm(forms.ModelForm):
             "base_notes":"Base Notes",
             "image": "Perfume Image",
             "description": "Perfume Description",
+            "image_alt": "Image Description",
         }

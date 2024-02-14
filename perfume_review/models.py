@@ -51,9 +51,9 @@ class Perfume(models.Model):
         blank=False,
         null=False,
     )
+    image_alt = models.CharField(max_length=100, default='', null=False, blank=False)
     description = RichTextField(max_length=1000, null=False, blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
     
     class Meta:
         ordering = ["-created_on"]
