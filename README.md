@@ -141,7 +141,22 @@ When I set my mind to make blog-like site about perfumes:
 - Perfume Images/Names are clickable and they are redirecting user to the detailed view of the given perfume.
 
 ## Perfumes List
-![The Newest Perfumes](static/images/features/perfumes-list.png)
+![Perfumes List](static/images/features/perfumes-list.png)
 
 - Perfumes page is sort of a list of perfumes, present at the moment, with the last added perfume being at the top of the list.
 - Each perfume on the list, is presented as a card containing:image, perfume brand, perfume name and beginning of the perfume description just to attract user to enter and find out more about the specific perfume.
+
+## Detailed Perfume View
+![Detailed Perfume View](static/images/features/perfume-detail.png)
+
+- This feature is kind of enriched version of the previous one.
+- Detailed Perfume View consist of: image, perfume brand, perfume name, perfume group, top notes, middle notes, base notes and description.
+- The look of the description depends on the user's imagination.
+
+![Edit and Delete Buttons](static/images/features/edit-delete-buttons.png)
+- In case that your are the creator of the perfume review(post), you will be able to see 2 additional buttons Edit and Delete. Thanks to them you will be able to update or delete your own posts.
+- Edit button will take you to form to edit your post which is identical as the one to add perfume(post) to the site.
+
+![Delete Confirm](static/images/features/delete-confirm.png)
+
+- Delete button will take user to the delete confirmation page. After pressing confirm, the perfume review will be deleted.
