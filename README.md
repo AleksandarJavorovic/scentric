@@ -116,3 +116,19 @@ When I set my mind to make blog-like site about perfumes:
 - I started the project by using the [gitpod python template](https://github.com/Code-Institute-Org/python-essentials-template) provided by the Code Insitute.
 - Then I regularly staged my changes using the command `git add .` and then committed the staged changes to my local repository using `git commit -m 'commit message text'`.
 - Finally, I pushed the commits to the GitHub repository using the command `git push`.
+
+## Navigation Bar
+![Navigation Bar](static/images/features/navbar.png)
+- The navigation bar as well as footer are present on all of the pages.
+- The Navbar contains Scentric Logo which is clickable and functions as a home page button. In the middle of the navbar we have Home Page, Perfumes Page, Register and Login page for the non authenticated users.
+- At the right side of the navbar is search-box, used to find desired perfume revive.
+
+![Navigation Bar Authenticated](static/images/features/navbar-logged-in.png)
+ 
+- After user logs in, Add Perfume Page and Logout Page are being presented, as well as message giving feedback to the user about successfull authentication.
+
+## Search 
+![Search](static/images/features/search-box.png)
+- As mentioned search bar is present within the navbar and can be used to find specific perfume.
+- It functions so that it will go through the Perfume Brands, Names, Top Notes, Middle Notes, Base Notes or Perfume Group and search for the given word.
+- User will be taken to the Perfumes Page and if found perfume/s will be presented on the page.
