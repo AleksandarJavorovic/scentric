@@ -188,3 +188,15 @@ When I set my mind to make blog-like site about perfumes:
 ## Validation
 ![Validation](static/images/features/validation.png)
 - All fields have to be filled in and in case the username is taken, or password is too common feedback mechanism will inform the user about it.
+
+## Login
+![Login](static/images/features/login.png)
+
+- As mentioned to be able to post or edit/delete your Perfume review, you need to be logged in.
+- Form is simple with a username/email line and password.
+- User can choose if he wants to be "remembered".
+
+## Logout
+![Logout](static/images/features/log-out.png)
+
+- Logout/Sign out page is very simple, user needs to click the "Sign Out" button, after that he will be logged out and sent to the home page.
