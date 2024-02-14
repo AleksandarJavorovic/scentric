@@ -46,52 +46,65 @@ While planning the project I tried to follow an agile development approach as mu
 ### Development Preparation
 When I set my mind to make blog-like site about perfumes:
 - At first, I created wireframes for my site so that I can have visual idea of how I want my site to looke like.
-<details>
-  <summary>Home Page Not Logged In
-  </summary>
 
-  ![Wireframe Home Page Not Logged In](static/images/wireframes/home-page-no-login.png)
-  </details>
+    <details>
+    <summary>Home Page Not Logged In
+    </summary>
 
-<details>
-  <summary>Home Page Logged In
-  </summary>
+    ![Wireframe Home Page Not Logged In](static/images/wireframes/home-page-no-login.png)
+    </details>
 
-  ![Wireframe Home Page Logged In](static/images/wireframes/home-page-loggedin.png)
-  </details>
+    <details>
+    <summary>Home Page Logged In
+    </summary>
 
-<details>
-  <summary>Perfumes Page
-  </summary>
+    ![Wireframe Home Page Logged In](static/images/wireframes/home-page-loggedin.png)
+    </details>
 
-  ![Wireframe Perfumes Page](static/images/wireframes/perfumes-page.png)
-  </details>
+    <details>
+    <summary>Perfumes Page
+    </summary>
 
-<details>
-  <summary>Add Perfume Page
-  </summary>
+    ![Wireframe Perfumes Page](static/images/wireframes/perfumes-page.png)
+    </details>
 
-  ![Wireframe Add Perfume Page](static/images/wireframes/add-perfume-form.png)
-  </details>
+    <details>
+    <summary>Add Perfume Page
+    </summary>
 
-<details>
-  <summary>Perfume Detail Page
-  </summary>
+    ![Wireframe Add Perfume Page](static/images/wireframes/add-perfume-form.png)
+    </details>
 
-  ![Wireframe Perfume Detail Page](static/images/wireframes/perfume-detail-page.png)
-  </details>
+    <details>
+    <summary>Perfume Detail Page
+    </summary>
 
-<details>
-  <summary>Registration Form Page
-  </summary>
+    ![Wireframe Perfume Detail Page](static/images/wireframes/perfume-detail-page.png)
+    </details>
 
-  ![Wireframe Registration Form Page](static/images/wireframes/reg-form.png)
-  </details>
+    <details>
+    <summary>Registration Form Page
+    </summary>
 
-<details>
-  <summary>Login Page
-  </summary>
+    ![Wireframe Registration Form Page](static/images/wireframes/reg-form.png)
+    </details>
 
-  ![Wireframe Login Page](static/images/wireframes/login-page.png)
-  </details>
+    <details>
+    <summary>Login Page
+    </summary>
+
+    ![Wireframe Login Page](static/images/wireframes/login-page.png)
+    </details>
+
+* Then I created ERD for my Perfume model:
+
+  <details>
+    <summary>ERD for Perfume Model
+    </summary>
+
+    ![ERD for Perfume Model](static/images/scentric-erd.png)
+    </details>
+
+* After that I've created the most of my User stories with appropriate labels, which can be found here:
+[Scentric Project](https://github.com/users/AleksandarJavorovic/projects/5)
   
