@@ -25,3 +25,6 @@ urlpatterns = [
     path('djrichtextfield/', include('djrichtextfield.urls')),
     path('', include('perfume_review.urls')),
 ]
+
+
+handler404 = 'blog.views.handling_404'
