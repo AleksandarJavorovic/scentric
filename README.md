@@ -107,4 +107,12 @@ When I set my mind to make blog-like site about perfumes:
 
 * After that I've created the most of my User stories with appropriate labels, which can be found here:
 [Scentric Project](https://github.com/users/AleksandarJavorovic/projects/5)
-  
+
+### Agile Development
+- While developing, I chose one issue to work on from the "Todo" column of the MVP board and moved it into the "In Progress" column.
+- After I was done with the issue by fulfilling all the acceptance criteria, I moved the issue into the "Done" Column.
+
+### Git
+- I started the project by using the [gitpod python template](https://github.com/Code-Institute-Org/python-essentials-template) provided by the Code Insitute.
+- Then I regularly staged my changes using the command `git add .` and then committed the staged changes to my local repository using `git commit -m 'short descriptive message here'`.
+- Finally, I pushed the commits to the GitHub repository using the command `git push`.
