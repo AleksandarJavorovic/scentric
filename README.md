@@ -111,6 +111,8 @@ When I set my mind to make blog-like site about perfumes:
 * After that I've created the most of my User stories with appropriate labels, which can be found here:
 [Scentric Project](https://github.com/users/AleksandarJavorovic/projects/5)
 
+- In terms of design, I went with pretty minimalistic look where whole site is in shades of black, white and grey. This contributes that radiant images of perfumes stand out even more.
+
 ### Agile Development
 - While developing, I chose one issue to work on from the "Todo" column of the MVP board and moved it into the "In Progress" column.
 - After I was done with the issue by fulfilling all the acceptance criteria, I moved the issue into the "Done" Column.
@@ -219,3 +221,27 @@ When I set my mind to make blog-like site about perfumes:
 - Adding comments to the site, where authenticated users are able to comment on other persons perfume review/comments.
 - Adding rating system, where users would be able to rate other people perfumes.
 - Add filters to the searching feature.
+
+# Deployment
+
+The site was deployed to Heroku platoform.
+
+## Deployment Preparation
+Before the deployment, the following steps were taken to prepare the application for the deployment on Heroku:
+- The setting DEBUG in the settings.py was set to FALSE.
+- All the dependencies were stored in the requirements.txt file with the command `pip3 freeze --local > requirements.txt`.
+- The start command for the application `web: gunicorn scentric.wsgi` was stored in a Procfile.
+
+## Setup
+The steps to deploy an app to Heroku are as follows:
+- Create a new App from the Heroku dashboard.
+- Enter a name for the app and select a region, then click on "Create App".
+- On the page of the app that opens, go to the "Settings" tab.
+- In Settings add the necessary config vars, for this project I added my cloudinary URL, database URL, and Django Secret Key.
+- Next, add the buildpack "Heroku/Python".
+- Afterwards, go to the "Deploy" tab on the app page.
+- In the "Deployment method" section, select "GitHub" and follow the steps to connect Heroku with GitHub.
+- Then, in the "Connect to GitHub" section, search for the repository that is supposed to be deployed and click on "Connect".
+- The last step is to either:
+    - enable automatic deployment by clicking on the button "Enable Automatic Deploys" in the "Automatic Deploys" Section.
+    - deploy a branch manually by selecting the branch and clicking the button "Deploy Branch" in the "Manual deploys" section.
