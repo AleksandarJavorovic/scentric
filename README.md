@@ -18,6 +18,7 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [The Newest Perfumes](#the-newest-perfumes)
   * [Perfumes List](#perfumes-list)
   * [Detailed Perfume View](#detailed-perfume-view)
+  * [Add Perfume](#add-perfume)
   * [Register](#register)
     * [Validation](#validation)
   * [Login](#login)
@@ -150,7 +151,7 @@ When I set my mind to make blog-like site about perfumes:
 ![Detailed Perfume View](static/images/features/perfume-detail.png)
 
 - This feature is kind of enriched version of the previous one.
-- Detailed Perfume View consist of: image, perfume brand, perfume name, perfume group, top notes, middle notes, base notes and description.
+- Detailed Perfume View consist of: image, perfume brand, perfume name, concentracion,perfume group, top notes, middle notes, base notes and description.
 - The look of the description depends on the user's imagination.
 
 ![Edit and Delete Buttons](static/images/features/edit-delete-buttons.png)
@@ -160,3 +161,21 @@ When I set my mind to make blog-like site about perfumes:
 ![Delete Confirm](static/images/features/delete-confirm.png)
 
 - Delete button will take user to the delete confirmation page. After pressing confirm, the perfume review will be deleted.
+
+## Add Perfume
+![Add Perfume](static/images/features/add-perfume-form.png)
+
+- This page is presented to the authenticated users and it is a form for adding the perfume to the site.
+- The form contains next fields:
+  - Perfume Brand
+  - Concentracion
+  - Perfume Name
+  - Perfume Group
+  - Top Notes
+  - Middle Notes
+  - Base Notes
+  - Perfume Image
+  - Image Description
+  - Description
+
+- All of the fields are obligatory to be filled in.
