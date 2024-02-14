@@ -25,6 +25,8 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [Footer](#footer)
   * [403 and 404 Page](#403-404-page)
   * [Future Features](#future-features)
+* [Used Technologies and Tools](#used-technologies-and-tools)
+  * [Django Apps](#django-apps)
 * [Testing](#testing)
   * [Manual Testing](#manual-testing)
   * [Validation](#validation)
@@ -36,11 +38,8 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
 * [Deployment](#deployment)
   * [Deployment Preparation](#deployment-preparation)
   * [Setup](#setup)
-* [Credits](#credits)
-  * [Used Technologies and Tools](#used-technologies-and-tools)
-  * [Django Apps](#django-apps)
+* [Credits](#credits-aa)
   * [Content and Media](#content-and-media)
-* [Acknowledgments](#acknowledgments)
 
 
 ## Development process
@@ -222,6 +221,19 @@ When I set my mind to make blog-like site about perfumes:
 - Adding rating system, where users would be able to rate other people perfumes.
 - Add filters to the searching feature.
 
+# Technologies and Tools
+- [Django](https://www.djangoproject.com/) - Python framework
+- [Bootstrap](https://getbootstrap.com/) - CSS framework
+- [Heroku](https://www.heroku.com/) - Deployment
+- [ElephantSQL](https://www.elephantsql.com/) - Database Provider
+- [Cloudinary](https://cloudinary.com/) - Image storage
+- [Black](https://black.vercel.app/) - Python code formatting
+
+### Django Apps
+- [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) was used to style the login and registration form
+- [cloudinary_storage and cloudinary](https://pypi.org/project/django-cloudinary-storage/) was used as the image storage
+- [djrichtextfield](https://pypi.org/project/django-richtextfield/) for extra text-edditing options within forms
+
 # Deployment
 
 The site was deployed to Heroku platoform.
@@ -245,3 +257,15 @@ The steps to deploy an app to Heroku are as follows:
 - The last step is to either:
     - enable automatic deployment by clicking on the button "Enable Automatic Deploys" in the "Automatic Deploys" Section.
     - deploy a branch manually by selecting the branch and clicking the button "Deploy Branch" in the "Manual deploys" section.
+
+## <a id="credits-aa"></a>**Credits**
+- I want to say to my wife:"Thank you for all your love and support. <3"
+
+- I want to thank to my mentor Mitko Bachvarov for tips and suggestions.
+
+### Content and Media
+- [Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) was used alot as a guide and inspiration for this project.
+- [Fantastic News](https://github.com/Cushione/fantastic-news/blob/main/README.md) was used as a inspiration for the README file.
+- Intro paragraph about the Scentric site is written by: [ChatGPT](https://chat.openai.com/).
+- All the images were "borrowed" from: [Notino.co.uk](https://www.notino.co.uk/).
+- Icons used on the website are from: [UXWING](https://uxwing.com/).
