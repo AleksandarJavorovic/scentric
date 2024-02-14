@@ -15,9 +15,9 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
 * [Features](#features)
   * [Navigation Bar](#navigation-bar)
   * [Search](#search)
-  * [Latest Perfumes](#latest-perfumes)
-  * [Perfumes List](#main-article-list)
-  * [Detailed Perfume View](#article-detail)
+  * [The Newest Perfumes](#the-newest-perfumes)
+  * [Perfumes List](#perfumes-list)
+  * [Detailed Perfume View](#detailed-perfume-view)
   * [Register](#register)
     * [Validation](#validation)
   * [Login](#login)
@@ -132,3 +132,10 @@ When I set my mind to make blog-like site about perfumes:
 - As mentioned search bar is present within the navbar and can be used to find specific perfume.
 - It functions so that it will go through the Perfume Brands, Names, Top Notes, Middle Notes, Base Notes or Perfume Group and search for the given word.
 - User will be taken to the Perfumes Page and if found perfume/s will be presented on the page.
+
+## The Newest Perfumes
+![The Newest Perfumes](static/images/features/the-newest-perfumes.png)
+
+- This feature is present at the home page, it presents three last perfumes being added to the site.
+- Each one is presented with the image and name of the perfume.
+- Perfume Images/Names are clickable and they are redirecting user to the detailed view of the given perfume.
