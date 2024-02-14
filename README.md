@@ -114,5 +114,5 @@ When I set my mind to make blog-like site about perfumes:
 
 ### Git
 - I started the project by using the [gitpod python template](https://github.com/Code-Institute-Org/python-essentials-template) provided by the Code Insitute.
-- Then I regularly staged my changes using the command `git add .` and then committed the staged changes to my local repository using `git commit -m 'short descriptive message here'`.
+- Then I regularly staged my changes using the command `git add .` and then committed the staged changes to my local repository using `git commit -m 'commit message text'`.
 - Finally, I pushed the commits to the GitHub repository using the command `git push`.
