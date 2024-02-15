@@ -12,7 +12,7 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [Development Preparation](#development-preparation)
   * [Agile Development](#agile-development)
   * [Git](#git)
-* [Features](#features)
+* [Features](#features-aa)
   * [Navigation Bar](#navigation-bar)
   * [Search](#search)
   * [The Newest Perfumes](#the-newest-perfumes)
@@ -22,20 +22,19 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [Registration](#registration)
   * [Validation](#validation)
   * [Login](#login)
+  * [Logout](#logout)
   * [Footer](#footer)
   * [403 and 404 Page](#403-and-404-page)
   * [Future Features](#future-features)
-* [Used Technologies and Tools](#used-technologies-and-tools)
+* [Used Technologies and Tools](#technologies)
   * [Django Apps](#django-apps)
-* [Testing](#testing)
-  * [Manual Testing](#manual-testing)
+* [Testing](#testing123)
   * [Validation Results](#validation-results)
-    * [Python](#python)
-    * [HTML](#html)
-    * [CSS](#css)
-    * [JS](#js)
+  * [Lighthouse Reports](#lighthouse-reports)
+  * [Accessibility](#accessibility)
+  * [Manual Testing](#manual-testing)
   * [Fixed Bugs](#fixed-bugs)
-  * [Known Bugs](#knows-bugs)
+  * [Known Bugs](#known-bugs)
 * [Deployment](#deployment)
   * [Deployment Preparation](#deployment-preparation)
   * [Setup](#setup)
@@ -121,6 +120,8 @@ When I set my mind to make blog-like site about perfumes:
 - I started the project by using the [gitpod python template](https://github.com/Code-Institute-Org/python-essentials-template) provided by the Code Insitute.
 - Then I regularly staged my changes using the command `git add .` and then committed the staged changes to my local repository using `git commit -m 'commit message text'`.
 - Finally, I pushed the commits to the GitHub repository using the command `git push`.
+
+# <a id="features-aa"></a>**Features**
 
 ## **Navigation Bar**
 ![Navigation Bar](static/images/features/navbar.png)
@@ -222,7 +223,7 @@ When I set my mind to make blog-like site about perfumes:
 - Adding rating system, where users would be able to rate other people perfumes.
 - Add filters to the searching feature.
 
-# **Technologies and Tools**
+# <a id="technologies"></a>**Technologies and Tools**
 - [Django](https://www.djangoproject.com/) - Python framework
 - [Bootstrap](https://getbootstrap.com/) - CSS framework
 - [Heroku](https://www.heroku.com/) - Deployment
@@ -235,7 +236,7 @@ When I set my mind to make blog-like site about perfumes:
 - [cloudinary_storage and cloudinary](https://pypi.org/project/django-cloudinary-storage/) was used as the image storage
 - [djrichtextfield](https://pypi.org/project/django-richtextfield/) for extra text-edditing options within forms
 
-## <a id="testing-aa"></a>**Testing**
+## <a id="testing123"></a>**Testing**
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project. CI Python Linter was used to validate all of python code.
 
@@ -287,7 +288,7 @@ There were no accessibility errors found.
 </details>
 
 ### **Manual Testing**
-The site was regularly test during development, and here are the cases of manual testing:
+The site was regularly tested during development, and here are the cases of manual testing:
   - [Manual Testing Results](manual_testing.md)
 
 ### **Fixed Bugs**
@@ -351,5 +352,5 @@ The steps to deploy an app to Heroku are as follows:
 - [Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) was used alot as a guide and inspiration for this project.
 - [Fantastic News](https://github.com/Cushione/fantastic-news/blob/main/README.md) was used as a inspiration for the README file.
 - Intro paragraph about the Scentric site is written by: [ChatGPT](https://chat.openai.com/).
-- All the images were "borrowed" from: [Notino.co.uk](https://www.notino.co.uk/).
+- Most of the images and descriptions were "borrowed" from: [Notino.co.uk](https://www.notino.co.uk/).
 - Icons used on the website are from: [UXWING](https://uxwing.com/).
