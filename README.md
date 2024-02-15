@@ -29,7 +29,7 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
   * [Django Apps](#django-apps)
 * [Testing](#testing)
   * [Manual Testing](#manual-testing)
-  * [Validation](#validation)
+  * [Validation Results](#validation-results)
     * [Python](#python)
     * [HTML](#html)
     * [CSS](#css)
@@ -233,6 +233,46 @@ When I set my mind to make blog-like site about perfumes:
 - [django-crispy-forms](https://pypi.org/project/django-crispy-forms/) was used to style the login and registration form
 - [cloudinary_storage and cloudinary](https://pypi.org/project/django-cloudinary-storage/) was used as the image storage
 - [djrichtextfield](https://pypi.org/project/django-richtextfield/) for extra text-edditing options within forms
+
+## <a id="testing-aa"></a>**Testing**
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate the project to ensure there were no syntax errors in the project. CI Python Linter was used to validate all of python code.
+
+- [W3C Markup Validator](https://validator.w3.org/)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+### **Validation Results**
+
+<details>
+  <summary>W3C-HTML
+  </summary>
+  
+  ![HTML file validation](static/images/testing/html-validation.png)
+  </details>
+
+  <details>
+  <summary>W3C-Jigsaw-CSS
+  </summary>
+  
+  ![CSS file validation](static/images/testing/css-validation.png)
+  </details>
+
+  <details>
+  <summary>CI Python Linter
+  </summary>
+  
+  ![CI Python Linter Validation](static/images/testing/python-linter.png)
+  </details>
+
+### **Lighthouse Reports**
+
+<details>
+<summary>Home Page
+</summary>
+  
+![Home Page Analysis](static/images/testing/home-page-lighthouse.png)
+</details>
 
 # **Deployment**
 
