@@ -34,7 +34,8 @@ Scentric is an imaginary perfume blog-like site, where users can find out about 
     * [HTML](#html)
     * [CSS](#css)
     * [JS](#js)
-  * [Bugs](#bugs)
+  * [Fixed Bugs](#fixed-bugs)
+  * [Known Bugs](#knows-bugs)
 * [Deployment](#deployment)
   * [Deployment Preparation](#deployment-preparation)
   * [Setup](#setup)
@@ -273,6 +274,45 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
   
 ![Home Page Analysis](static/images/testing/home-page-lighthouse.png)
 </details>
+
+### **Accessibility**
+
+There were no accessibility errors found.
+
+<details>
+<summary>Wave WebAIM
+</summary>
+  
+![Wave WebAIM](static/images/testing/wave-report.png)
+</details>
+
+### **Fixed Bugs**
+
+- **Bug 1:**
+
+  I had problem with style of the detailed view of the perfume while DEBUG was set to False in settings.py(deployed version too). I am not sure what exactly caused this.
+
+    <details>
+    <summary>Bug 1 Image
+    </summary>
+        
+    ![Bug Image](static/images/bugs/scentric-debug-false-deployed.png)
+    </details>
+
+- **Fix 1:**
+
+  This was sorted with: setting `DEBUG = True`, runnig `python3 manage.py collectstatic`, resetting `DEBUG = False`. In the end I've pushed code to GitHub and redeployed again at Heroku.
+
+    <details>
+    <summary>Fix 1 Image
+    </summary>
+          
+    ![Fix Image](static/images/bugs/fix-1.png)
+    </details>
+
+### **Known Bugs**
+
+- At the moment there are no known bugs.
 
 # **Deployment**
 
