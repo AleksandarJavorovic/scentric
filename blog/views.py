@@ -6,6 +6,9 @@ from django.shortcuts import render
 
 
 class Index(ListView):
+    '''
+    View for the Home Page
+    '''
     template_name = "blog/index.html"
     model = Perfume
     context_object_name = "perfumes"
@@ -13,6 +16,6 @@ class Index(ListView):
     def get_queryset(self):
         return self.model.objects.all()[:3]
 
-
+# handling of 404 error
 def handling_404(request, exception):
     return render(request, "404.html", {})
