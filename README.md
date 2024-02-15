@@ -286,6 +286,32 @@ There were no accessibility errors found.
 ![Wave WebAIM](static/images/testing/wave-report.png)
 </details>
 
+### **Manual Testing**
+
+| Testcase                          | Expected Result                                                       | Test Result |
+|-----------------------------------|-----------------------------------------------------------------------|-------------|
+| Logo is clicked             | Home page is loaded successfully                     | ✅ PASS          |
+| Open the Homepage                 | Home page is loaded successfully                     | ✅ PASS          |
+| Open the Perfumes Page                | Perfumes page is loaded successfully                     | ✅ PASS          |
+| Open the Sign Up Page                | Sign Up page is loaded successfully                     | ✅ PASS          |
+| Open the Login Page                | Login page is loaded successfully                     | ✅ PASS          |
+| Open the Logout Page                | Logout page is loaded successfully                     | ✅ PASS          |
+| Open the specific perfume Page                | Page is loaded successfully                     | ✅ PASS          |
+| Try to open non-existing page                | 404 page is loaded successfully                     | ✅ PASS          |
+| Open the Add Perfume Page(authenticated)               | Add Perfume page is loaded successfully                     | ✅ PASS          |
+| Register user with valid data              | Request is successfull                     | ✅ PASS          |
+| Register user with invalid data              | Request is  not successfull                     | ✅ PASS          |
+| Login user with valid data              | Request is successfull                     | ✅ PASS          |
+| Login user with invalid data              | Request is  not successfull                     | ✅ PASS          |
+| Add Perfume form filled in correctly              | Review created successfully                     | ✅ PASS          |
+| Add Perfume form filled in incorrectly              | Mistake is pointed out                     | ✅ PASS          |
+| Authenticated user views his own post              | Edit and Delete buttons are present                    | ✅ PASS          |
+| Non-authenticated user views his own post              | Edit and Delete buttons aren't present                     | ✅ PASS          |
+| Authenticated user views not own post              | Edit and Delete buttons aren't present                     | ✅ PASS          |
+
+
+
+
 ### **Fixed Bugs**
 
 - **Bug 1:**
