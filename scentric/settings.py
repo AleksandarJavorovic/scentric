@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
-if os.path.isfile('env.py'):
+if os.path.exists('env.py'):
     import env
 
 from django.contrib import messages
@@ -30,11 +30,10 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
-    '8000-aleksandarjavo-scentric-zes09bh18k7.ws-eu107.gitpod.io',
-    '8000-aleksandarjavo-scentric-zes09bh18k7.ws-eu108.gitpod.io',
+    '127.0.0.1',
     '.herokuapp.com']
 
 
