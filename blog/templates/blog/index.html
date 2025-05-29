@@ -18,13 +18,13 @@
         </p>
     </section>
     <hr>
-    <h1 class="text-center mb-3 mt-5">The Newest Perfumes!</h1>
+    <h1 class="text-center mb-3 mt-5">- Latest Perfumes -</h1>
     <section class="p-1">
         <div class="perfume-cont">
             {% for perfume in perfumes %}
-            <a href="{% url 'perfume_detail' perfume.id %}" class="image-container">
-                <img src="{{perfume.image.url}}" alt="{{perfume.image_alt}}" class="img-fluid">
-                <div class="centered">
+            <a href="{% url 'perfume_detail' perfume.id %}" class="main-page-perfume-link">
+                <img src="{{perfume.image.url}}" alt="{{perfume.image_alt}}" class="">
+                <div class="centered mb-5">
                     <h3>{{perfume.perfume_name}}</h3>
                 </div>
             </a>

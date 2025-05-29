@@ -36,6 +36,15 @@ footer {
     border-radius: 5px;
 }
 
+.main-page-perfume-link {
+    color: black;
+    text-decoration: none;
+}
+
+.main-page-perfume-link:hover {
+    color: #adb5bd;
+}
+
 /* Perfumes */
 
 .card {
@@ -67,6 +76,7 @@ footer {
 .perfume-cont {
     column-count: 1;
     text-align: center;
+    column-gap: 2rem;
 }
 a.image-container {
     text-align: center;
@@ -92,9 +102,9 @@ a.image-container {
 }
 
 @media screen and (min-width: 40em) {
-    .perfume-cont {
+    /* .perfume-cont {
         column-count: 2;
-    }
+    } */
 }
 
 @media screen and (min-width: 62.5em) {
